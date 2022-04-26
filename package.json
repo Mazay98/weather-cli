@@ -1,0 +1,20 @@
+{
+  "name": "wether-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "weather": "index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node ./index.js",
+    "help": "node ./index.js -- -h"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "chalk": "^5.0.1"
+  }
+}
