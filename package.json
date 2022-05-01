@@ -2,19 +2,23 @@
   "name": "wether-cli",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "bin": {
-    "weather": "index.js"
+    "weather": "./dist/index.js"
   },
   "type": "module",
   "scripts": {
-    "start": "node ./index.js",
-    "help": "node ./index.js -- -h"
+    "start": "node ./dist/index.js",
+    "help": "node ./dist/index.js -- -h"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.26.1",
-    "chalk": "^5.0.1"
+    "chalk": "^5.0.1",
+    "typescript": "^4.6.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.29"
   }
 }

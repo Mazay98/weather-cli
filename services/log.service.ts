@@ -1,13 +1,16 @@
 import chalk from "chalk";
+import {IWeatherResponse} from "./api.service.js"
 
 class Logger {
-    printError(msg){
+    printError(msg: string) {
         console.log(chalk.bgRed("Error") + " " + msg)
     }
-    printSuccess(msg){
+
+    printSuccess(msg: string) {
         console.log(chalk.bgGreen("Success") + " " + msg)
     }
-    printHelp(){
+
+    printHelp() {
         console.log(chalk.bgCyan("HELP") +
             "\nYou have use commands:" +
             "\nHelp: -h" +
@@ -15,7 +18,8 @@ class Logger {
             "\nSet token: -t [TOKEN]"
         )
     }
-    printWeather(res){
+
+    printWeather(res: IWeatherResponse) {
         console.log(chalk.bgYellow("Погода в городе " + res.name) +
             "\nСкорость ветра: " + res.wind.speed +
             "\nОблачность: " + res.weather[0].description +
